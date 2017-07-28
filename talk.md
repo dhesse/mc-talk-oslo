@@ -13,7 +13,7 @@
 - Simulating Stop and Go Traffic.
     - The Nagel-Schreckenberg model.
 
-<!-- -
+---
 
 # About Me
 
@@ -28,8 +28,6 @@ width: 15vw; height: auto">
     - Some software/simulation work in Roxar.
     - Data Science consulting.
     - Chief Data Scientist, AIA Science.
-
---->
 
 ---
 
