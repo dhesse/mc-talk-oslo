@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0034)http://127.0.0.1:5000/talk/talk.md -->
+<!-- saved from url=(0036)http://127.0.0.1:5000/talk/talk.md?0 -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta http-equiv="Content-Style-Type" content="text/css">
@@ -233,9 +233,11 @@
 </style></head>
 <body><div id="MathJax_Message" style="display: none;"></div><div style="width: 100vw; height: 100vh; background-color: black; position: absolute; top: 0px; left: 0px; display: none;"></div>
 <div id="outer">
-  <!--div id="header">
-    <img src="/static/img/header.png">
-  </div-->
+  <div id="copyright">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img src="./index_files/cc.png">
+    </a>
+  </div>
   <div class="slide firstslide" style="display: block;">
     <div class="stripe"></div>
     <h1 class="title">Forecasting At Scale</h1>
@@ -261,38 +263,40 @@
     <li>The Nagel-Schreckenberg model.</li>
     </ul></li>
     </ul>
-    <!-- -
-    
-    # About Me
-    
-    <img src="img/dirk.png" style="position: absolute; right: 2vh; top: 4vh;
-    width: 15vw; height: auto">
-    
-    - Background in **physics**.
-        - Computational particle physics.
-        - Large scale MCMC QCD simulations.
-        - PhD from Humboldt University, Berlin.
-    - Move to industry.
-        - Some software/simulation work in Roxar.
-        - Data Science consulting.
-        - Chief Data Scientist, AIA Science.
-    
-    --->
     <div class="slidenum">1</div></div>
+    <div class="slide" style="display: none;"><div class="stripe"></div>
+    <h1 id="about-me">About Me</h1>
+    <p><img src="./index_files/dirk.png" style="position: absolute; right: 2vh; top: 4vh;
+    width: 15vw; height: auto"></p>
+    <ul>
+    <li>Background in <strong>physics</strong>.
+    <ul>
+    <li>Computational particle physics.</li>
+    <li>Large scale MCMC QCD simulations.</li>
+    <li>PhD from Humboldt University, Berlin.</li>
+    </ul></li>
+    <li>Move to industry.
+    <ul>
+    <li>Some software/simulation work in Roxar.</li>
+    <li>Data Science consulting.</li>
+    <li>Chief Data Scientist, AIA Science.</li>
+    </ul></li>
+    </ul>
+    <div class="slidenum">2</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="monte-carlo-methods">Monte Carlo Methods</h1>
     <blockquote>
     <p>Monte Carlo methods (or Monte Carlo experiments) are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. Their essential idea is using randomness to solve problems that might be deterministic in principle.</p>
     </blockquote>
     <p><small>Source: Wikipedia</small></p>
-    <div class="slidenum">2</div></div>
+    <div class="slidenum">3</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="monte-carlo-approximation-of-pi">Monte Carlo Approximation of Pi</h1>
     <div class="figure">
     <img src="./index_files/pi_500.png">
     
     </div>
-    <div class="slidenum">3</div></div>
+    <div class="slidenum">4</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="a-little-theory">A Little Theory</h1>
     <p>Instead of</p>
@@ -300,14 +304,14 @@
     <p>we calculate</p>
     <p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="mjx-chtml MJXc-display" style="text-align: center;"><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 116%; text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;msub&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mover&gt;&lt;mi&gt;&amp;#x03BC;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x005E;&lt;/mo&gt;&lt;/mover&gt;&lt;/mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mfrac&gt;&lt;munder&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-22" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-23" class="mjx-mrow"><span id="MJXc-Node-24" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-25" class="mjx-texatom"><span id="MJXc-Node-26" class="mjx-mrow"><span id="MJXc-Node-27" class="mjx-munderover"><span class="mjx-stack"><span class="mjx-over" style="height: 0.213em; padding-bottom: 0.06em; padding-left: 0.079em;"><span id="MJXc-Node-29" class="mjx-mo" style="vertical-align: top;"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.397em; padding-bottom: 0.323em;">^</span></span></span><span class="mjx-op"><span id="MJXc-Node-28" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.496em;">μ</span></span></span></span></span></span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.391em; padding-right: 0.071em;"><span id="MJXc-Node-30" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.471em; padding-bottom: 0.471em; padding-right: 0.06em;">f</span></span></span></span><span id="MJXc-Node-31" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.075em; padding-bottom: 0.323em;">=</span></span><span id="MJXc-Node-32" class="mjx-mfrac MJXc-space3"><span class="mjx-box MJXc-stacked" style="width: 1.088em; padding: 0px 0.12em;"><span class="mjx-numerator" style="width: 1.088em; top: -1.368em;"><span id="MJXc-Node-33" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.347em;">1</span></span></span><span class="mjx-denominator" style="width: 1.088em; bottom: -0.711em;"><span id="MJXc-Node-34" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.471em; padding-bottom: 0.273em; padding-right: 0.085em;">N</span></span></span><span class="mjx-line" style="border-bottom: 2.4px solid; top: -0.28em; width: 1.088em;"></span></span><span class="mjx-vsize" style="height: 2.078em; vertical-align: -0.711em;"></span></span><span id="MJXc-Node-35" class="mjx-munderover MJXc-space1"><span class="mjx-itable"><span class="mjx-row"><span class="mjx-cell"><span class="mjx-op"><span id="MJXc-Node-36" class="mjx-mo"><span class="mjx-char MJXc-TeX-size2-R" style="padding-top: 0.718em; padding-bottom: 0.718em;">∑</span></span></span></span></span><span class="mjx-row"><span class="mjx-under" style="font-size: 70.7%; padding-top: 0.236em; padding-bottom: 0.141em; padding-left: 0.849em;"><span id="MJXc-Node-37" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em;">i</span></span></span></span></span></span><span id="MJXc-Node-38" class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.471em; padding-bottom: 0.471em; padding-right: 0.06em;">f</span></span><span id="MJXc-Node-39" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">(</span></span><span id="MJXc-Node-40" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-41" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.298em;">x</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-42" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-43" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">)</span></span><span id="MJXc-Node-44" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.172em; padding-bottom: 0.545em;">,</span></span></span></span><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mrow class="MJX-TeXAtom-ORD"><mover><mi>μ</mi><mo stretchy="false">^</mo></mover></mrow><mi>f</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mi>i</mi></munder><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>,</mo></math></span></span></span><script type="math/tex; mode=display" id="MathJax-Element-2">\hat \mu_f = \frac 1 N \sum_i f(x_i),</script></span></p>
     <p>with the <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 116%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-45" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-46" class="mjx-mrow"><span id="MJXc-Node-47" class="mjx-msubsup"><span class="mjx-base"><span id="MJXc-Node-48" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.298em;">x</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-49" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.446em; padding-bottom: 0.298em;">i</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-3">x_i</script></span> distributed according to <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 116%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-50" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-51" class="mjx-mrow"><span id="MJXc-Node-52" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.471em;">p</span></span><span id="MJXc-Node-53" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">(</span></span><span id="MJXc-Node-54" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-55" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-4">p(x)</script></span>, i.e. <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 116%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;U&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;U&lt;/mi&gt;&lt;/mrow&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-56" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-57" class="mjx-mrow"><span id="MJXc-Node-58" class="mjx-texatom"><span id="MJXc-Node-59" class="mjx-mrow"><span id="MJXc-Node-60" class="mjx-mi"><span class="mjx-char MJXc-TeX-cal-R" style="padding-top: 0.421em; padding-bottom: 0.347em; padding-right: 0.061em;">U</span></span></span></span><span id="MJXc-Node-61" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">(</span></span><span id="MJXc-Node-62" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.421em;">−</span></span><span id="MJXc-Node-63" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-64" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.172em; padding-bottom: 0.545em;">,</span></span><span id="MJXc-Node-65" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-66" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">)</span></span><span id="MJXc-Node-67" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.199em; padding-bottom: 0.323em;">×</span></span><span id="MJXc-Node-68" class="mjx-texatom MJXc-space2"><span id="MJXc-Node-69" class="mjx-mrow"><span id="MJXc-Node-70" class="mjx-mi"><span class="mjx-char MJXc-TeX-cal-R" style="padding-top: 0.421em; padding-bottom: 0.347em; padding-right: 0.061em;">U</span></span></span></span><span id="MJXc-Node-71" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">(</span></span><span id="MJXc-Node-72" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.421em;">−</span></span><span id="MJXc-Node-73" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-74" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.172em; padding-bottom: 0.545em;">,</span></span><span id="MJXc-Node-75" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.372em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-76" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.471em; padding-bottom: 0.594em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi class="MJX-tex-caligraphic" mathvariant="script">U</mi></mrow><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>×</mo><mrow class="MJX-TeXAtom-ORD"><mi class="MJX-tex-caligraphic" mathvariant="script">U</mi></mrow><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-5">\mathcal{U}(-1, 1) \times \mathcal{U}(-1, 1)</script></span> in our example.</p>
-    <div class="slidenum">4</div></div>
+    <div class="slidenum">5</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="approximating-pi-many-times">Approximating Pi, Many Times</h1>
     <div class="figure">
     <img src="./index_files/pi_hist.png">
     
     </div>
-    <div class="slidenum">5</div></div>
+    <div class="slidenum">6</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="who-is-using-monte-carlo">Who is Using Monte Carlo?</h1>
     <table>
@@ -345,14 +349,14 @@
     </li></ul></td></tr>
     </tbody></table>
     
-    <div class="slidenum">6</div></div>
+    <div class="slidenum">7</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="apache-spark">Apache Spark</h1>
     <blockquote>
     <p>Apache Spark™ is a fast and general engine for large-scale data processing.</p>
     </blockquote>
     <p><small>Source: <a href="http://spark.apache.org/" class="uri">http://spark.apache.org</a></small></p>
-    <div class="slidenum">7</div></div>
+    <div class="slidenum">8</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="spark-overview">Spark Overview</h1>
     <table>
@@ -370,7 +374,7 @@
     </tbody></table>
     
     <p>Set <em>world record</em> for the <em>cheapest sort</em> at <strong>$1.44/TB</strong> in Nov. 2016, on <em>Amazon EC2</em>!</p>
-    <div class="slidenum">8</div></div>
+    <div class="slidenum">9</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="why-do-monte-carlo-on-spark">Why Do Monte Carlo on Spark?</h1>
     <ul>
@@ -386,14 +390,14 @@
     <li>Availability.</li>
     </ul></li>
     </ul>
-    <div class="slidenum">9</div></div>
+    <div class="slidenum">10</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="modeling-traffic">Modeling Traffic</h1>
     <div class="figure">
     <img src="./index_files/traffic.jpg">
     
     </div>
-    <div class="slidenum">10</div></div>
+    <div class="slidenum">11</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="the-nagel-schreckenberg-model">The Nagel-Schreckenberg Model</h1>
     <ul>
@@ -407,27 +411,27 @@
     <li>With a given probability <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-11-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 116%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-105" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-106" class="mjx-mrow"><span id="MJXc-Node-107" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.471em;">p</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></span></span><script type="math/tex" id="MathJax-Element-11">p</script></span>, reduce the speed by 1 unit.</li>
     </ol></li>
     </ul>
-    <div class="slidenum">11</div></div>
+    <div class="slidenum">12</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="simulation-results">Simulation Results</h1>
     <div class="figure">
     <img src="./index_files/traf_7.png">
     
     </div>
-    <div class="slidenum">12</div></div>
+    <div class="slidenum">13</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <h1 id="simulation-results---vmt">Simulation Results - VMT</h1>
     <div class="figure">
     <img src="./index_files/distances.png">
     
     </div>
-    <div class="slidenum">13</div></div>
+    <div class="slidenum">14</div></div>
     <div class="slide" style="display: none;"><div class="stripe"></div>
     <div style="height: 30vh">
     
     </div>
     <h1 id="demo-time">Demo Time</h1>
-  <div class="slidenum">14</div></div>
+  <div class="slidenum">15</div></div>
 </div>
 
 

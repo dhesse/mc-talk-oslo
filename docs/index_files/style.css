@@ -22,11 +22,14 @@ code, table {
     text-align: left;
     margin: 0.5em auto;
 }
-
 code {
     display: inline-block;
 }
-
+#copyright {
+    position: fixed;
+    bottom: 1vh;
+    left: 1vh;
+}
 blockquote {
     font-style: italic;
     text-align: left;
